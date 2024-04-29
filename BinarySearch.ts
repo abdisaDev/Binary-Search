@@ -1,3 +1,12 @@
+/**
+ * Author: Abdisa Alemu
+ * ID: ATE/2603/14
+ * Github: @abdisaDev
+ * GithubRepoAddress: git@github.com:abdisaDev/Binary-Search.git
+ * Language: Typescript (TS)
+ * Description: ( DSA Project) Binary Search With Custom Push and Sort Method
+ */
+
 class Stack {
   binarySearch(stack: Array<number>, input: number): boolean {
     let array: Array<number> = Array.from(new Set(this.sortStack(stack)));

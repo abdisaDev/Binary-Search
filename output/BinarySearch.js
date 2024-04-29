@@ -1,3 +1,9 @@
+/**
+ * Author: Abdisa Alemu
+ * ID: ATE/2603/14
+ * Github: @abdisaDev
+ *
+ */
 class Stack {
     binarySearch(stack, input) {
         let array = Array.from(new Set(this.sortStack(stack)));
