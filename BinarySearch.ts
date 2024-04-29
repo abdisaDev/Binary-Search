@@ -8,19 +8,19 @@ class Stack {
     console.log(array[mid], " == ", input);
     if (array[mid] === input) {
       return `${input} found at index mid: ${mid}`;
-    } else if (array[mid] < input) {
-      let leftElements = array.splice(mid);
+    } else if (array[mid] < input && array.length > 1) {
+      let leftElements = array.splice(mid, Number.MAX_VALUE);
       this.binarySearch(leftElements, input);
-    } else if (array[mid] > input) {
-      array.splice(mid);
-      console.log(array, "2");
-      this.binarySearch(array, input);
+    } else if (array[mid] > input && array.length > 1) {
+      let rightElements = array.splice(0, mid);
+      console.log(rightElements, "2");
+      this.binarySearch(rightElements, input);
     }
     return `${input} Not found`;
   }
 
   push(input: number) {
-    this.stack[this.stackLength] = input;
+    this.stack[this.stackLength - 1] = input;
   }
 
   set setStack(array: Array<number>) {
